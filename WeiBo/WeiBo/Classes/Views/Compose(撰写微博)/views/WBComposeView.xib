@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="R2s-ju-p9d" customClass="WBComposeView" customModule="WeiBo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_slogan" translatesAutoresizingMaskIntoConstraints="NO" id="mJk-ZH-QGG">
+                    <rect key="frame" x="86.5" y="50" width="202" height="20"/>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-bn-OPC">
+                    <rect key="frame" x="0.0" y="263.5" width="375" height="333.5"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ID-PP-zQU">
+                    <rect key="frame" x="171.5" y="614" width="31" height="30"/>
+                    <state key="normal" title="返回"/>
+                    <connections>
+                        <action selector="CancelClick:" destination="R2s-ju-p9d" eventType="touchUpInside" id="S5A-eS-Y7S"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuG-H2-JvQ">
+                    <rect key="frame" x="175.5" y="617" width="24" height="24"/>
+                    <state key="normal" image="叉"/>
+                    <connections>
+                        <action selector="CloseClick:" destination="R2s-ju-p9d" eventType="touchUpInside" id="1Gb-rI-jAd"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="pdE-pu-X4m" firstAttribute="bottom" secondItem="rkz-bn-OPC" secondAttribute="bottom" constant="70" id="3CW-Qk-s0r"/>
+                <constraint firstItem="9ID-PP-zQU" firstAttribute="centerX" secondItem="R2s-ju-p9d" secondAttribute="centerX" id="7Dr-h5-ynb"/>
+                <constraint firstItem="rkz-bn-OPC" firstAttribute="leading" secondItem="pdE-pu-X4m" secondAttribute="leading" id="Gcu-9Q-dJE"/>
+                <constraint firstItem="rkz-bn-OPC" firstAttribute="height" secondItem="R2s-ju-p9d" secondAttribute="height" multiplier="0.5" id="GnA-bw-gWC"/>
+                <constraint firstItem="pdE-pu-X4m" firstAttribute="trailing" secondItem="rkz-bn-OPC" secondAttribute="trailing" id="Qv2-1z-Ry6"/>
+                <constraint firstItem="TuG-H2-JvQ" firstAttribute="centerY" secondItem="9ID-PP-zQU" secondAttribute="centerY" id="gfQ-3F-kVd"/>
+                <constraint firstItem="TuG-H2-JvQ" firstAttribute="centerX" secondItem="R2s-ju-p9d" secondAttribute="centerX" id="rd6-y1-uXg"/>
+                <constraint firstItem="mJk-ZH-QGG" firstAttribute="top" secondItem="pdE-pu-X4m" secondAttribute="top" constant="30" id="rdp-Jb-Pct"/>
+                <constraint firstItem="mJk-ZH-QGG" firstAttribute="centerX" secondItem="R2s-ju-p9d" secondAttribute="centerX" id="xK2-YN-lF3"/>
+                <constraint firstItem="TuG-H2-JvQ" firstAttribute="top" secondItem="rkz-bn-OPC" secondAttribute="bottom" constant="20" id="zu9-Ve-Kb4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="pdE-pu-X4m"/>
+            <connections>
+                <outlet property="cancelBtn" destination="9ID-PP-zQU" id="Kq4-mj-wO7"/>
+                <outlet property="cancelBtnCenterX" destination="7Dr-h5-ynb" id="U7F-3P-fhL"/>
+                <outlet property="closeBtnCenterX" destination="rd6-y1-uXg" id="QRM-aV-1mo"/>
+                <outlet property="scrollView" destination="rkz-bn-OPC" id="Qo5-59-Raz"/>
+                <outlet property="slogan" destination="mJk-ZH-QGG" id="zTd-zY-SnA"/>
+            </connections>
+            <point key="canvasLocation" x="102" y="-235"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_slogan" width="202" height="20"/>
+        <image name="叉" width="24" height="24"/>
+    </resources>
+</document>

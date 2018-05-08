@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBComposeViewController" customModule="WeiBo" customModuleProvider="target">
+            <connections>
+                <outlet property="ComposeButton" destination="EQt-G6-JNe" id="Mrz-Bs-Fyt"/>
+                <outlet property="titleLabel" destination="n8m-ut-acX" id="NyC-vp-4i4"/>
+                <outlet property="toolBar" destination="KyV-LE-trc" id="r4o-yP-2lV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyV-LE-trc">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <items>
+                        <barButtonItem title="Item" id="ndz-cz-7vy"/>
+                    </items>
+                </toolbar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KyV-LE-trc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KAQ-11-Prh"/>
+                <constraint firstItem="KyV-LE-trc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="mvX-6L-OOl"/>
+                <constraint firstItem="KyV-LE-trc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sSr-gh-8hF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EQt-G6-JNe">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+            <state key="normal" title="发布" backgroundImage="comBtnhigh"/>
+            <state key="disabled" backgroundImage="comBtnNormal"/>
+            <state key="highlighted" backgroundImage="comBtnDisenble">
+                <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            </state>
+            <point key="canvasLocation" x="511" y="-101"/>
+        </button>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n8m-ut-acX">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="119"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <attributedString key="attributedText">
+                <fragment content="发微博 96一代SS">
+                    <attributes>
+                        <font key="NSFont" size="14" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+            </attributedString>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-283.5" y="71.5"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="comBtnDisenble" width="16" height="16"/>
+        <image name="comBtnNormal" width="16" height="16"/>
+        <image name="comBtnhigh" width="16" height="16"/>
+    </resources>
+</document>

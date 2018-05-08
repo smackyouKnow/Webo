@@ -1,0 +1,45 @@
+[
+  {
+    "visitorInfo" : {
+      "imageName" : "place",
+      "message" : "关注一些人，回这里看看有什么惊喜"
+    },
+    "className" : "CCYHomeViewController",
+    "title" : "首页",
+    "imageName" : "tabBar_essence_icon",
+    "selectedImage" : "tabBar_essence_click_icon"
+  },
+  {
+    "visitorInfo" : {
+      "imageName" : "place1",
+      "message" : "登陆后，别人评论你的微博，发给你的消息，都会在这里收到通知"
+    },
+    "className" : "MessageViewController",
+    "title" : "消息",
+    "imageName" : "tabBar_new_icon",
+    "selectedImage" : "tabBar_new_click_icon"
+  },
+  {
+    "className" : "UIViewController"
+  },
+  {
+    "visitorInfo" : {
+      "imageName" : "place2",
+      "message" : "登录后，最新、最热微博尽在掌握，不再会与实施潮流擦肩而过"
+    },
+    "className" : "CCYDiscoverViewController",
+    "title" : "发现",
+    "imageName" : "tabBar_friendTrends_icon",
+    "selectedImage" : "tabBar_friendTrends_click_icon"
+  },
+  {
+    "visitorInfo" : {
+      "imageName" : "place3",
+      "message" : "登陆后，你的微博、相册、个人资料会显示在这里，展示给别人"
+    },
+    "className" : "ProfileViewController",
+    "title" : "我",
+    "imageName" : "tabBar_me_icon",
+    "selectedImage" : "tabBar_me_click_icon"
+  }
+]
