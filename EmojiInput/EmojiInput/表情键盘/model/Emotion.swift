@@ -10,7 +10,7 @@ import UIKit
 import HandyJSON
 
 class Emotion: NSObject {
-    ///十六进制字符串，emoji图片
+    ///十六进制字符串，赋值emoji字符串
     var code : String? {
         didSet {
             guard let code = code else {
@@ -23,6 +23,9 @@ class Emotion: NSObject {
             emoji = String.init(Character(UnicodeScalar(result)!))
         }
     }
+    
+    //最近使用的次数
+    var times : Int = 0
     
     //emoji字符串
     var emoji : String?

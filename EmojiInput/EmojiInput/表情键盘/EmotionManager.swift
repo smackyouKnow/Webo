@@ -21,6 +21,26 @@ class EmotionManager: NSObject {
         loadPackages()
     }
     
+    ///最近使用表情
+    func recentEmotion(em : Emotion) {
+        em.times += 1
+        
+        //之前没有这个em，添加进去
+        if !packages[0]!.emotions.contains(em) {
+            packages[0]?.emotions.append(em)
+        }
+        
+        //按照times排序
+        packages[0]!.emotions.sort { (em1, em2) -> Bool in
+            return (em1?.times)! > (em2?.times)!
+        }
+        
+        //不能超过20
+        if packages[0]!.emotions.count > 20 {
+            packages[0]!.emotions.removeSubrange(20..<packages[0]!.emotions.count)
+        }
+    }
+    
 }
 
 //MARK: 加载表情表

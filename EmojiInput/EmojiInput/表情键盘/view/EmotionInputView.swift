@@ -17,9 +17,14 @@ class EmotionInputView: UIView {
     @IBOutlet weak var toolBar: EmoticonToollBar!
     
     @IBOutlet weak var pageControl: UIPageControl!
-    class func show() -> EmotionInputView {
+    
+    var completion : ((_ emtion : Emotion?) -> ())?
+    
+    class func show(completion: @escaping (_ emtion : Emotion?) -> ()) -> EmotionInputView {
         
         let v = Bundle.main.loadNibNamed("EmotionInputView", owner: nil, options: nil)?.last as! EmotionInputView
+        //赋值block
+        v.completion = completion
         
         return v
     }
@@ -27,7 +32,6 @@ class EmotionInputView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        collectionView.register(UINib.init(nibName: "EmotionCell", bundle: nil), forCellWithReuseIdentifier: EmotionCellId)
         collectionView.register(EmotionCell.self, forCellWithReuseIdentifier: EmotionCellId)
         
         toolBar.delegate = self
@@ -56,6 +60,7 @@ extension EmotionInputView : UICollectionViewDataSource, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EmotionCellId, for: indexPath) as! EmotionCell
+        cell.delegate = self
         
         if let package = EmotionManager.shared.packages[indexPath.section] {
             cell.emotions = package.emotion(page: indexPath.row)
@@ -71,6 +76,7 @@ extension EmotionInputView : UICollectionViewDelegateFlowLayout {
         var center = scrollView.center
         center.x += scrollView.contentOffset.x
         
+        //获取当前页面
         let paths = collectionView.indexPathsForVisibleItems
         
         var targetIndexPath : IndexPath?
@@ -97,5 +103,29 @@ extension EmotionInputView : UICollectionViewDelegateFlowLayout {
 extension EmotionInputView : EmoticonToollBarDelegate {
     func toolBarItemClickForIndex(index: Int) {
         collectionView.scrollToItem(at: IndexPath.init(row: 0, section: index), at: .left, animated: true)
+    }
+}
+
+//MARK: EmotionCellDelegate
+extension EmotionInputView : EmotionCellDelegate {
+    func emotionCellDidSelectedEmotion(cell: EmotionCell, emtion: Emotion?) {
+        
+        //把模型传出去
+        self.completion?(emtion)
+        
+        //点击一个，在最近记录一个，刷新视图
+        guard let em = emtion else {
+            return
+        }
+        
+        //如果当前collectionView是"最近"分组，不添加最近表情
+        let indexPath = collectionView.indexPath(for: cell)
+        if indexPath?.section == 0 {
+            return
+        }
+        EmotionManager.shared.recentEmotion(em: em)
+        
+        collectionView.reloadData()
+        
     }
 }

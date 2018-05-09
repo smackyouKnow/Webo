@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let emotionInputView : EmotionInputView = EmotionInputView.show()
+    let emotionInputView : EmotionInputView = EmotionInputView.show { (em) in
+        print(em)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        let tf = UITextField.init(frame: CGRect.init(x: 100, y: 100, width: 100, height: 30))
+        let tf = UITextField.init(frame: CGRect.init(x: 50, y: 100, width: 300, height: 30))
         tf.backgroundColor = UIColor.lightGray
         tf.placeholder = "你好打野"
         tf.addTarget(self, action: #selector(emotionKeyBoard), for: .editingDidBegin)

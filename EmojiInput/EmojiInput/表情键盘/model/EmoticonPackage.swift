@@ -51,7 +51,7 @@ class EmoticonPackage: NSObject {
         return (emotions.count - 1) / 20 + 1
     }
     
-    //MARK: 每个cell对应的模型数据
+    //MARK: 每个cell对应的模型数组
     func emotion(page : Int) -> [Emotion] {
         //每页数据
         let count = 20

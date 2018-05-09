@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		752428E1104520C79143F4CD /* Pods_EmojiInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352AD47140E11B03455C6823 /* Pods_EmojiInput.framework */; };
+		908CE96120A291DA00770898 /* EmotionTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE96020A291DA00770898 /* EmotionTipView.swift */; };
 		90C47A5C20A187F3006F9FA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C47A5B20A187F3006F9FA4 /* AppDelegate.swift */; };
 		90C47A5E20A187F3006F9FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C47A5D20A187F3006F9FA4 /* ViewController.swift */; };
 		90C47A6120A187F3006F9FA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90C47A5F20A187F3006F9FA4 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		352AD47140E11B03455C6823 /* Pods_EmojiInput.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojiInput.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		908CE96020A291DA00770898 /* EmotionTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionTipView.swift; sourceTree = "<group>"; };
 		90C47A5820A187F3006F9FA4 /* EmojiInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmojiInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90C47A5B20A187F3006F9FA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90C47A5D20A187F3006F9FA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				90C47A9C20A19C7C006F9FA4 /* EmotionCell.swift */,
 				90C47A9D20A19C7C006F9FA4 /* EmotionCell.xib */,
 				90C47AA020A19D63006F9FA4 /* EmotionLayout.swift */,
+				908CE96020A291DA00770898 /* EmotionTipView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908CE96120A291DA00770898 /* EmotionTipView.swift in Sources */,
 				90C47A9920A195A0006F9FA4 /* EmoticonToollBar.swift in Sources */,
 				90C47A5E20A187F3006F9FA4 /* ViewController.swift in Sources */,
 				90C47A5C20A187F3006F9FA4 /* AppDelegate.swift in Sources */,
