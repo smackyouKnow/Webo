@@ -17,9 +17,11 @@ protocol StatusCellDelegate : NSObjectProtocol {
 
 class StatusCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabelHeight: NSLayoutConstraint!
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nickNameLabel: UILabel!
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var titleLabel: CCYLabel!

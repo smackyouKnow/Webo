@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -55,12 +54,6 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vip1" translatesAutoresizingMaskIntoConstraints="NO" id="fGe-k2-liQ">
                         <rect key="frame" x="103" y="19" width="14" height="14"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ad " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaZ-Mv-35l" customClass="CCYLabel" customModule="WeiBo" customModuleProvider="target">
-                        <rect key="frame" x="12" y="64" width="297" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMj-Fp-K0u" customClass="StatusPicture" customModule="WeiBo" customModuleProvider="target">
                         <rect key="frame" x="12" y="82" width="297" height="100"/>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -176,6 +169,12 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile_AddV_authen" translatesAutoresizingMaskIntoConstraints="NO" id="xOm-21-9ay">
                         <rect key="frame" x="40" y="45" width="14" height="14"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0j-B8-WHv" customClass="CCYLabel" customModule="WeiBo" customModuleProvider="target">
+                        <rect key="frame" x="12" y="64" width="297" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Gza-Iv-62C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3zX-P4-43C"/>
@@ -184,13 +183,13 @@
                     <constraint firstItem="Nve-yx-TGW" firstAttribute="top" secondItem="uMj-Fp-K0u" secondAttribute="bottom" constant="12" id="Afo-ux-KzS"/>
                     <constraint firstAttribute="trailing" secondItem="Nve-yx-TGW" secondAttribute="trailing" constant="12" id="FzP-0Q-NQU"/>
                     <constraint firstItem="uMj-Fp-K0u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="G90-Di-Wze"/>
+                    <constraint firstAttribute="trailing" secondItem="M0j-B8-WHv" secondAttribute="trailing" constant="12" id="KJs-Za-I9F"/>
                     <constraint firstItem="Ocr-nI-sRh" firstAttribute="leading" secondItem="FN4-uN-vXo" secondAttribute="leading" id="Kl1-HM-WHf"/>
                     <constraint firstItem="Gza-Iv-62C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Kn5-he-buW"/>
                     <constraint firstItem="fGe-k2-liQ" firstAttribute="centerY" secondItem="FN4-uN-vXo" secondAttribute="centerY" id="Mot-bn-Czm"/>
                     <constraint firstItem="FN4-uN-vXo" firstAttribute="leading" secondItem="Ehm-kx-Bfb" secondAttribute="trailing" constant="8" id="NYp-Fh-jD8"/>
                     <constraint firstAttribute="trailing" secondItem="Gza-Iv-62C" secondAttribute="trailing" id="Pnf-fB-jBY"/>
-                    <constraint firstItem="uaZ-Mv-35l" firstAttribute="top" secondItem="Ehm-kx-Bfb" secondAttribute="bottom" constant="12" id="dGB-H7-5wP"/>
-                    <constraint firstAttribute="trailing" secondItem="uaZ-Mv-35l" secondAttribute="trailing" constant="12" id="e9o-df-jhq"/>
+                    <constraint firstItem="M0j-B8-WHv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="WkB-Uf-ARt"/>
                     <constraint firstItem="xOm-21-9ay" firstAttribute="centerY" secondItem="Ehm-kx-Bfb" secondAttribute="bottom" id="eBe-ms-OcZ"/>
                     <constraint firstItem="Ehm-kx-Bfb" firstAttribute="top" secondItem="Gza-Iv-62C" secondAttribute="bottom" constant="12" id="eXa-qX-LDN"/>
                     <constraint firstItem="fGe-k2-liQ" firstAttribute="leading" secondItem="FN4-uN-vXo" secondAttribute="trailing" constant="10" id="gPj-yI-0xw"/>
@@ -199,9 +198,9 @@
                     <constraint firstItem="XdR-Y0-bEe" firstAttribute="centerY" secondItem="Ocr-nI-sRh" secondAttribute="centerY" id="qjO-fn-VaY"/>
                     <constraint firstItem="FN4-uN-vXo" firstAttribute="top" secondItem="Ehm-kx-Bfb" secondAttribute="top" id="r4c-OB-YI6"/>
                     <constraint firstItem="xOm-21-9ay" firstAttribute="centerX" secondItem="Ehm-kx-Bfb" secondAttribute="trailing" id="rGW-36-mbp"/>
-                    <constraint firstItem="uaZ-Mv-35l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="sly-pf-oZd"/>
+                    <constraint firstItem="uMj-Fp-K0u" firstAttribute="top" secondItem="M0j-B8-WHv" secondAttribute="bottom" id="rSB-Os-HDl"/>
+                    <constraint firstItem="M0j-B8-WHv" firstAttribute="top" secondItem="Ehm-kx-Bfb" secondAttribute="bottom" constant="12" id="t9a-Q9-Sl7"/>
                     <constraint firstItem="Ehm-kx-Bfb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="tZA-N5-VzA"/>
-                    <constraint firstItem="uMj-Fp-K0u" firstAttribute="top" secondItem="uaZ-Mv-35l" secondAttribute="bottom" id="u83-cg-NIT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -215,11 +214,11 @@
                 <outlet property="shareBtn" destination="9DR-Cr-rKg" id="bnf-vj-LcL"/>
                 <outlet property="sourceLabel" destination="XdR-Y0-bEe" id="IT8-ot-Rb9"/>
                 <outlet property="timeLabel" destination="Ocr-nI-sRh" id="N4W-ig-IUo"/>
-                <outlet property="titleLabel" destination="uaZ-Mv-35l" id="C2k-pM-a4b"/>
+                <outlet property="titleLabel" destination="M0j-B8-WHv" id="pjZ-YV-RvT"/>
                 <outlet property="vipIcon" destination="fGe-k2-liQ" id="p56-HH-MmI"/>
                 <outlet property="vipLevel" destination="xOm-21-9ay" id="p7w-UE-KMk"/>
             </connections>
-            <point key="canvasLocation" x="318" y="-6"/>
+            <point key="canvasLocation" x="139" y="-22"/>
         </tableViewCell>
     </objects>
     <resources>

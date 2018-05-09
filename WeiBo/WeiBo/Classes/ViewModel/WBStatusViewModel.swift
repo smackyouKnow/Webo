@@ -80,6 +80,7 @@ class WBStatusViewModel: CustomStringConvertible {
         //正文
         if let text = model.text {
             textAttributed = NSAttributedString.init(string: text, attributes: [NSAttributedStringKey.font : UIFont.systemFont(ofSize: 15)])
+            
         }
         
         
