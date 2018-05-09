@@ -27,6 +27,8 @@
 		908CE97C20A2BD7B00770898 /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CE97020A2BD7B00770898 /* delete@3x.png */; };
 		908CE97E20A2C6BE00770898 /* PlaceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE97D20A2C6BE00770898 /* PlaceTextView.swift */; };
 		908CE98020A2D24A00770898 /* EmotionAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE97F20A2D24A00770898 /* EmotionAttachment.swift */; };
+		908CE98320A2DB5800770898 /* status.sql in Resources */ = {isa = PBXBuildFile; fileRef = 908CE98220A2DB5800770898 /* status.sql */; };
+		908CE98520A2DC4800770898 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE98420A2DC4800770898 /* SqliteManager.swift */; };
 		90AFCFAC209C42EF00375840 /* CCYPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE87D7209AFC3E00D7FFE4 /* CCYPhotoBrowserController.m */; };
 		90C3518D20A031CB00298E37 /* WBComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3518C20A031CB00298E37 /* WBComposeView.swift */; };
 		90C3518F20A031D500298E37 /* WBComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C3518E20A031D500298E37 /* WBComposeView.xib */; };
@@ -117,6 +119,8 @@
 		908CE97020A2BD7B00770898 /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@3x.png"; sourceTree = "<group>"; };
 		908CE97D20A2C6BE00770898 /* PlaceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTextView.swift; sourceTree = "<group>"; };
 		908CE97F20A2D24A00770898 /* EmotionAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAttachment.swift; sourceTree = "<group>"; };
+		908CE98220A2DB5800770898 /* status.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = status.sql; sourceTree = "<group>"; };
+		908CE98420A2DC4800770898 /* SqliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		90C3518C20A031CB00298E37 /* WBComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBComposeView.swift; sourceTree = "<group>"; };
 		90C3518E20A031D500298E37 /* WBComposeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeView.xib; sourceTree = "<group>"; };
 		90C3519020A03C7200298E37 /* ComposeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeButton.swift; sourceTree = "<group>"; };
@@ -276,6 +280,15 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		908CE98120A2DB3900770898 /* 数据库 */ = {
+			isa = PBXGroup;
+			children = (
+				908CE98420A2DC4800770898 /* SqliteManager.swift */,
+				908CE98220A2DB5800770898 /* status.sql */,
+			);
+			path = "数据库";
+			sourceTree = "<group>";
+		};
 		90C3518720A0316500298E37 /* Compose(撰写微博) */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,6 +387,7 @@
 		90F88B862092FD140008CE83 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				908CE98120A2DB3900770898 /* 数据库 */,
 				908CE96220A2BD7B00770898 /* 表情键盘 */,
 				90C47A0920A178EB006F9FA4 /* FPSLabel */,
 				90FE87D3209AF46300D7FFE4 /* PhotoBrowser */,
@@ -667,6 +681,7 @@
 				90C3519720A04F2400298E37 /* WBComposeViewController.xib in Resources */,
 				908CE97C20A2BD7B00770898 /* delete@3x.png in Resources */,
 				90F88B5F2092FCD70008CE83 /* Assets.xcassets in Resources */,
+				908CE98320A2DB5800770898 /* status.sql in Resources */,
 				90C3519320A03C7A00298E37 /* ComposeButton.xib in Resources */,
 				90F88B5D2092FCD60008CE83 /* Main.storyboard in Resources */,
 				908CE97520A2BD7B00770898 /* EmotionInputView.xib in Resources */,
@@ -792,6 +807,7 @@
 				90C3518D20A031CB00298E37 /* WBComposeView.swift in Sources */,
 				90C3519620A04F2400298E37 /* WBComposeViewController.swift in Sources */,
 				90FC05902094450600757A36 /* CCYWelComeView.swift in Sources */,
+				908CE98520A2DC4800770898 /* SqliteManager.swift in Sources */,
 				908CE97120A2BD7B00770898 /* EmotionManager.swift in Sources */,
 				908CE98020A2D24A00770898 /* EmotionAttachment.swift in Sources */,
 				90F88B8E2092FFB50008CE83 /* CustomTabBarController.swift in Sources */,
