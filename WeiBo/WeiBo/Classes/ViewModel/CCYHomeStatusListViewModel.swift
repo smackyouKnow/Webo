@@ -37,9 +37,14 @@ class CCYHomeStatusListViewModel {
         
         let sinceid = pullup ? 0 : (self.statusList.first?.status.id ?? 0)
         let maxid = pullup ? (self.statusList.last?.status.mid ?? 0) : 0
+
         
-        //加载数据
-        CCYNetworkManager.shared.statusList(since_id: sinceid, max_id: maxid) { (list, isSuccess) in
+        SqliteStatusListViewModel.loadStatus(since_id: sinceid, max_id: maxid) { (list, isSuccess) in
+            
+//        }
+//
+//        //加载数据
+//        CCYNetworkManager.shared.statusList(since_id: sinceid, max_id: maxid) { (list, isSuccess) in
             
 //            print(list)
             if !isSuccess {

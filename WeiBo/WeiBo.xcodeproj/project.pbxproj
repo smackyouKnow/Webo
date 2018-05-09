@@ -29,6 +29,7 @@
 		908CE98020A2D24A00770898 /* EmotionAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE97F20A2D24A00770898 /* EmotionAttachment.swift */; };
 		908CE98320A2DB5800770898 /* status.sql in Resources */ = {isa = PBXBuildFile; fileRef = 908CE98220A2DB5800770898 /* status.sql */; };
 		908CE98520A2DC4800770898 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE98420A2DC4800770898 /* SqliteManager.swift */; };
+		908CE98720A2E8CC00770898 /* SqliteStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE98620A2E8CC00770898 /* SqliteStatusListViewModel.swift */; };
 		90AFCFAC209C42EF00375840 /* CCYPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE87D7209AFC3E00D7FFE4 /* CCYPhotoBrowserController.m */; };
 		90C3518D20A031CB00298E37 /* WBComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3518C20A031CB00298E37 /* WBComposeView.swift */; };
 		90C3518F20A031D500298E37 /* WBComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C3518E20A031D500298E37 /* WBComposeView.xib */; };
@@ -121,6 +122,7 @@
 		908CE97F20A2D24A00770898 /* EmotionAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAttachment.swift; sourceTree = "<group>"; };
 		908CE98220A2DB5800770898 /* status.sql */ = {isa = PBXFileReference; lastKnownFileType = text; path = status.sql; sourceTree = "<group>"; };
 		908CE98420A2DC4800770898 /* SqliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
+		908CE98620A2E8CC00770898 /* SqliteStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteStatusListViewModel.swift; sourceTree = "<group>"; };
 		90C3518C20A031CB00298E37 /* WBComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBComposeView.swift; sourceTree = "<group>"; };
 		90C3518E20A031D500298E37 /* WBComposeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeView.xib; sourceTree = "<group>"; };
 		90C3519020A03C7200298E37 /* ComposeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeButton.swift; sourceTree = "<group>"; };
@@ -443,6 +445,7 @@
 			children = (
 				90FC059120945B2B00757A36 /* CCYHomeStatusListViewModel.swift */,
 				90FC05952094641B00757A36 /* WBStatusViewModel.swift */,
+				908CE98620A2E8CC00770898 /* SqliteStatusListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				90FC059220945B2B00757A36 /* CCYHomeStatusListViewModel.swift in Sources */,
 				9051237D20999F0C002394FB /* WBUser.swift in Sources */,
 				908CE97B20A2BD7B00770898 /* EmotionInputView.swift in Sources */,
+				908CE98720A2E8CC00770898 /* SqliteStatusListViewModel.swift in Sources */,
 				90F88BB3209322C40008CE83 /* OAuthViewController.swift in Sources */,
 				9051237B20999CB0002394FB /* String+Extension.swift in Sources */,
 				9051237920999998002394FB /* Date+Extension.swift in Sources */,

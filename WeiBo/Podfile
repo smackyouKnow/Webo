@@ -15,4 +15,6 @@ target 'WeiBo' do
   pod 'SnapKit'
   pod 'HandyJSON'
   pod 'YYWebImage'
+  pod 'YYText'
+  
 end
