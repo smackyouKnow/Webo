@@ -19,8 +19,7 @@ extension CCYNetworkManager {
         
         let params = ["since_id" : since_id, "max_id" : max_id];
         
-        tokenRequest(method: .GET, URLString: urlString, parameters: params as [String : AnyObject]?) { (json, isSuccess) in
-            
+        tokenRequest(method: .GET, URLString: urlString, parameters:  params as [String : AnyObject]?, name: nil, data: nil) { (json, isSuccess) in
             let result = json?["statuses"] as? [[String : AnyObject]]
             
             completion(result, isSuccess)
@@ -64,7 +63,7 @@ extension CCYNetworkManager {
         
         let parameter = ["access_token" : self.userModel.access_token, "uid" : uid]
         
-        tokenRequest(method: .GET, URLString: "https://api.weibo.com/2/users/show.json", parameters: parameter as [String : AnyObject]) { (json, isSuccess) in
+        tokenRequest(method: .GET, URLString: "https://api.weibo.com/2/users/show.json", parameters: parameter as [String : AnyObject] , name: nil, data: nil) { (json, isSuccess) in
             //给模型赋值
             guard let json = json as? [String : AnyObject],
                 let screen_name = json["screen_name"] as? String,
@@ -80,5 +79,33 @@ extension CCYNetworkManager {
             
             completion(isSuccess)
         }
+    }
+}
+
+//MARK: 发送微博
+extension CCYNetworkManager {
+    func postStatus(text : String, image: UIImage?, completion:@escaping ((_ result : [String : AnyObject]?, _ isSuccess : Bool) -> ())) {
+        
+        let url : String
+        if image == nil {
+            url = "https://api.weibo.com/2/statuses/update.json"
+        } else {
+            url = "https://upload.api.weibo.com/2/statuses/upload.json"
+        }
+        
+        let params = ["status" : text]
+        //如果图像不为空，需要设置name和data
+        var name : String?
+        var data : Data?
+        
+        if image != nil {
+            name = "pic"
+            data = UIImagePNGRepresentation(image!)
+        }
+        
+        tokenRequest(method: .POST, URLString: url, parameters: params as [String : AnyObject], name: name, data: data) { (json, isSuccess) in
+            completion(json as? [String : AnyObject], isSuccess)
+        }
+        
     }
 }

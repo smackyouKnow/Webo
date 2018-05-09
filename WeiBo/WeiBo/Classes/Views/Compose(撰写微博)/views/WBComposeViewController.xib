@@ -12,8 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBComposeViewController" customModule="WeiBo" customModuleProvider="target">
             <connections>
                 <outlet property="ComposeButton" destination="EQt-G6-JNe" id="Mrz-Bs-Fyt"/>
+                <outlet property="textView" destination="eve-Qg-kVj" id="SHM-uy-gm9"/>
                 <outlet property="titleLabel" destination="n8m-ut-acX" id="NyC-vp-4i4"/>
                 <outlet property="toolBar" destination="KyV-LE-trc" id="r4o-yP-2lV"/>
+                <outlet property="toolBarBottom" destination="mvX-6L-OOl" id="H3Z-5k-Wy2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,12 +30,22 @@
                         <barButtonItem title="Item" id="ndz-cz-7vy"/>
                     </items>
                 </toolbar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eve-Qg-kVj" customClass="PlaceTextView" customModule="WeiBo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="KyV-LE-trc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="KAQ-11-Prh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eve-Qg-kVj" secondAttribute="trailing" id="bYy-yz-B90"/>
+                <constraint firstItem="KyV-LE-trc" firstAttribute="top" secondItem="eve-Qg-kVj" secondAttribute="bottom" id="ejY-j3-DQ1"/>
                 <constraint firstItem="KyV-LE-trc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="mvX-6L-OOl"/>
                 <constraint firstItem="KyV-LE-trc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sSr-gh-8hF"/>
+                <constraint firstItem="eve-Qg-kVj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xgB-sO-Nau"/>
+                <constraint firstItem="eve-Qg-kVj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zit-84-Z6g"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

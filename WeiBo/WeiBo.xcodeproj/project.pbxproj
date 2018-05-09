@@ -25,6 +25,8 @@
 		908CE97A20A2BD7B00770898 /* EmoticonToollBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE96E20A2BD7B00770898 /* EmoticonToollBar.swift */; };
 		908CE97B20A2BD7B00770898 /* EmotionInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE96F20A2BD7B00770898 /* EmotionInputView.swift */; };
 		908CE97C20A2BD7B00770898 /* delete@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 908CE97020A2BD7B00770898 /* delete@3x.png */; };
+		908CE97E20A2C6BE00770898 /* PlaceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE97D20A2C6BE00770898 /* PlaceTextView.swift */; };
+		908CE98020A2D24A00770898 /* EmotionAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908CE97F20A2D24A00770898 /* EmotionAttachment.swift */; };
 		90AFCFAC209C42EF00375840 /* CCYPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FE87D7209AFC3E00D7FFE4 /* CCYPhotoBrowserController.m */; };
 		90C3518D20A031CB00298E37 /* WBComposeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3518C20A031CB00298E37 /* WBComposeView.swift */; };
 		90C3518F20A031D500298E37 /* WBComposeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C3518E20A031D500298E37 /* WBComposeView.xib */; };
@@ -113,6 +115,8 @@
 		908CE96E20A2BD7B00770898 /* EmoticonToollBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonToollBar.swift; sourceTree = "<group>"; };
 		908CE96F20A2BD7B00770898 /* EmotionInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionInputView.swift; sourceTree = "<group>"; };
 		908CE97020A2BD7B00770898 /* delete@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@3x.png"; sourceTree = "<group>"; };
+		908CE97D20A2C6BE00770898 /* PlaceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTextView.swift; sourceTree = "<group>"; };
+		908CE97F20A2D24A00770898 /* EmotionAttachment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionAttachment.swift; sourceTree = "<group>"; };
 		90C3518C20A031CB00298E37 /* WBComposeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBComposeView.swift; sourceTree = "<group>"; };
 		90C3518E20A031D500298E37 /* WBComposeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeView.xib; sourceTree = "<group>"; };
 		90C3519020A03C7200298E37 /* ComposeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeButton.swift; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 				908CE96D20A2BD7B00770898 /* EmotionTipView.swift */,
 				908CE96E20A2BD7B00770898 /* EmoticonToollBar.swift */,
 				908CE96F20A2BD7B00770898 /* EmotionInputView.swift */,
+				908CE97F20A2D24A00770898 /* EmotionAttachment.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				90C3519220A03C7A00298E37 /* ComposeButton.xib */,
 				90C3519420A04F2400298E37 /* WBComposeViewController.swift */,
 				90C3519520A04F2400298E37 /* WBComposeViewController.xib */,
+				908CE97D20A2C6BE00770898 /* PlaceTextView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -787,11 +793,13 @@
 				90C3519620A04F2400298E37 /* WBComposeViewController.swift in Sources */,
 				90FC05902094450600757A36 /* CCYWelComeView.swift in Sources */,
 				908CE97120A2BD7B00770898 /* EmotionManager.swift in Sources */,
+				908CE98020A2D24A00770898 /* EmotionAttachment.swift in Sources */,
 				90F88B8E2092FFB50008CE83 /* CustomTabBarController.swift in Sources */,
 				90F88B98209302E80008CE83 /* MessageViewController.swift in Sources */,
 				90FC058B20941F3000757A36 /* NSString+Extension.m in Sources */,
 				908CE97920A2BD7B00770898 /* EmotionTipView.swift in Sources */,
 				905123832099AA6D002394FB /* StatusCell.swift in Sources */,
+				908CE97E20A2C6BE00770898 /* PlaceTextView.swift in Sources */,
 				90F88BA3209307F30008CE83 /* VistorView.swift in Sources */,
 				90F88BBC20932B780008CE83 /* CCYCommon.swift in Sources */,
 				9051237F2099A3FE002394FB /* WBStatusPicture.swift in Sources */,

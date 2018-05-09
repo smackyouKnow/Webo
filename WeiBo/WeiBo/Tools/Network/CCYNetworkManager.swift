@@ -35,7 +35,7 @@ class CCYNetworkManager: AFHTTPSessionManager {
     }()
     
     //MARK: 携带access_token的请求方法
-    func tokenRequest(method : HTTPMethod = .GET, URLString : String, parameters : [String : AnyObject]?, completion : @escaping (_ json : AnyObject?, _ isSuccess : Bool) -> ()) {
+    func tokenRequest(method : HTTPMethod = .GET, URLString : String, parameters : [String : AnyObject]?, name : String?, data : Data?, completion : @escaping (_ json : AnyObject?, _ isSuccess : Bool) -> ()) {
         
         //1.判断access_token是否存在
         guard let access_token = userModel.access_token else {
@@ -57,7 +57,12 @@ class CCYNetworkManager: AFHTTPSessionManager {
         //2.1设置参数token
         params!["access_token"] = access_token as AnyObject
         
-        request(method: method, URLString: URLString, parameters: params, completion: completion)
+        if let name = name, let data = data {
+            upload(method: .POST, urlString: URLString, parameters: params, data: data, name: name, completion: completion)
+        } else {
+            request(method: method, URLString: URLString, parameters: params, completion: completion)
+        }
+        
     }
     
     //MARK: 网络最底层的方法
@@ -68,7 +73,14 @@ class CCYNetworkManager: AFHTTPSessionManager {
         }
         
         let failure = {(tasks : URLSessionDataTask?, error : Error) -> () in
-                completion(nil, false)
+            
+            if (tasks?.response as? HTTPURLResponse)?.statusCode == 403 {
+                print("token过期了")
+                
+                //FIXME:  发送登录通知，重新获取token
+            }
+
+            completion(nil, false)
         }
         
         if method == .GET {
@@ -76,6 +88,25 @@ class CCYNetworkManager: AFHTTPSessionManager {
         } else {
             self.post(URLString, parameters: parameters, progress: nil, success: success, failure: failure)
         }
+    }
+    
+    //MARK: 底层的上传方法
+    func upload(method : HTTPMethod = .POST, urlString : String, parameters : [String : AnyObject]?, data: Data, name: String, completion:@escaping ((_ json : AnyObject?, _ isSuccess : Bool) -> ())) {
+        
+        post(urlString, parameters: parameters, constructingBodyWith: { (fromData) in
+            fromData.appendPart(withFileData: data, name: name, fileName: "xxx", mimeType: "application.octet-stream")
+        }, progress: nil, success: { (_, json) in
+            completion(json as AnyObject?, true)
+        }) { (task, error) in
+            
+            if (task?.response as? HTTPURLResponse)?.statusCode == 403 {
+                print("token过期了")
+                
+                //FIXME:  发送登录通知，重新获取token
+            }
+            completion(nil, false)
+        }
+        
     }
     
 }

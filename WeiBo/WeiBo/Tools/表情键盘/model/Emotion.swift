@@ -51,6 +51,32 @@ class Emotion: NSObject {
 
         return image
     }
+    
+    
+    /// 将当前的图像转换生成富文本
+    ///
+    /// - Parameter font: 文字大小
+    /// - Returns: 富文本
+    func imageText(font : UIFont) -> NSAttributedString {
+        guard let image = image else {
+            return NSAttributedString.init(string: "")
+        }
+        
+        let attachment = EmotionAttachment()
+        attachment.chs = self.chs
+        
+        attachment.image = image
+        let height = font.lineHeight
+        attachment.bounds = CGRect.init(x: 0, y: -4, width: height, height: height)
+        
+        //返回图片属性文本
+        let attrStrM = NSMutableAttributedString.init(attributedString: NSAttributedString.init(attachment: attachment))
+        
+        //设置字体属性
+        attrStrM.addAttributes([NSAttributedStringKey.font : font], range: NSRange.init(location: 0, length: 1))
+        
+        return attrStrM
+    }
 
     
     override required init() {
