@@ -13,6 +13,14 @@ private let calender = Calendar.current
 
 extension Date {
     
+    static func cy_dateString(detle: TimeInterval) -> String {
+        let date = Date.init(timeIntervalSinceNow: detle)
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        return dateFormatter.string(from: date)
+    }
+    
     static func ccy_sinaDate(string : String) -> Date? {
         dateFormatter.dateFormat = "EEE MMM d HH:mm:ss Z yyyy"
         dateFormatter.locale = Locale.init(identifier: "en_US");

@@ -9,6 +9,9 @@
 import UIKit
 import FMDB
 
+//一周
+private let maxDBClearTime : TimeInterval = -5 * 24 * 3600
+
 class SqliteManager: NSObject {
 
     static var shared = SqliteManager()
@@ -26,6 +29,22 @@ class SqliteManager: NSObject {
         queue = FMDatabaseQueue.init(path: path)
         
         createTable()
+        
+        //注册通知
+        NotificationCenter.default.addObserver(self, selector: #selector(clearDB), name: NSNotification.Name.UIApplicationDidEnterBackground, object: nil)
+    }
+    
+    @objc func clearDB() {
+        let dateString = Date.cy_dateString(detle: maxDBClearTime)
+        
+        let sql = "delete from T_status where createTime < ?;"
+        
+        //执行sql
+        queue.inDatabase { (db) in
+            if db.executeUpdate(sql, withArgumentsIn: [dateString]) == true {
+                print("删除了\(db.changes)条数据")
+            }
+        }
     }
     
     
